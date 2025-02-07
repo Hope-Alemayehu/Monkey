@@ -23,30 +23,31 @@ Ensure you have Go installed on your system.
 
 1. Clone the repository:
 
-   ```sh
-   git clone https://github.com/yourusername/monkey-interpreter.git
+   ```
+   git clone https://github.com/Hope-Alemayehu/Monkey
+   gitmonkey-interpreter.git
    cd monkey-interpreter
+```
 Build the project:
 
-sh
-Copy
+```
 go build -o monkey
+```
 Run the REPL:
-
-sh
-Copy
+```
 ./monkey
+```
 Usage
 Once inside the REPL, you can write Monkey code:
 
-sh
-Copy
+```
 >> let five = 5;
 >> let ten = 10;
 >> five + ten;
 15
 >> if (5 < 10) { return true; } else { return false; }
 true
+```
 To exit, press Ctrl + D or Ctrl + C.
 
 Project Structure
@@ -60,6 +61,7 @@ monkey-interpreter/
 ├── token/          # Token definitions
 ├── main.go         # Entry point
 ├── README.md       # Project documentation
+
 Contributing
 Feel free to open issues or submit pull requests.
 
