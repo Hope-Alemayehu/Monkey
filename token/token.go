@@ -1,5 +1,7 @@
 package token
 
+import "strings"
+
 //defined the tokentype to be string
 type TokenType string
 
@@ -19,8 +21,17 @@ const (
 	INT   = "INT"   //123456789
 
 	//operators
-	ASSIGN = "="
-	PLUS   = "+"
+	ASSIGN   = "="
+	PLUS     = "+"
+	MINUS    = "-"
+	BANG     = "!"
+	ASTERISK = "*"
+	SLASH    = "/"
+	EQ       = "=="
+	NOT_EQ   = "!="
+
+	LT = "<"
+	GT = ">"
 
 	//Delimiters
 
@@ -36,11 +47,21 @@ const (
 
 	FUNCTION = "FUNCTION"
 	LET      = "LET"
+	TRUE     = "TRUE"
+	FALSE    = "FALSE"
+	IF       = "IF"
+	ELSE     = "ELSE"
+	RETURN   = "RETURN"
 )
 
 var keywords = map[string]TokenType{
-	"fn":  FUNCTION,
-	"let": LET,
+	"fn":     FUNCTION,
+	"let":    LET,
+	"true":   TRUE,
+	"false":  FALSE,
+	"if":     IF,
+	"else":   ELSE,
+	"return": RETURN,
 }
 
 //checks the keywords table to see whether the given identifier is a keyword
@@ -49,6 +70,8 @@ var keywords = map[string]TokenType{
 
 //?????? why are we returning IDENT
 func LookupIdent(ident string) TokenType {
+	//could cause problems later
+	ident = strings.ToLower(ident) // Ensure case insensitivity
 	if tok, ok := keywords[ident]; ok {
 		return tok
 	}
