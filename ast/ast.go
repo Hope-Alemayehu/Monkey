@@ -1,12 +1,17 @@
 package ast
 
-import "monkey/token"
+import (
+	"bytes"
+	"monkey/token"
+)
 
-//every node in our AST implement Node interface
+// every node in our AST implement Node interface
 type Node interface {
 	//TokenLiteral returns the literal value of the token it's associated with
 	//will be used for debugging
 	TokenLiteral() string
+	//to print AST nodes for debugging and comparing with other nodes
+	String() string
 }
 
 type Statement interface {
@@ -31,8 +36,8 @@ func (p *Program) TokenLiteral() string {
 	}
 }
 
-//Name holds the identifier of the binding
-//Value holds the expression that produces value
+// Name holds the identifier of the binding
+// Value holds the expression that produces value
 type LetStatement struct {
 	Token token.Token
 	Name  *Identifier
@@ -57,3 +62,23 @@ type ReturnStatement struct {
 
 func (rs *ReturnStatement) StatementNode()       {}
 func (rs *ReturnStatement) TokenLiteral() string { return rs.Token.Literal }
+
+type ExpressionStatement struct {
+	Token      token.Token
+	Expression Expression
+}
+
+func (es *ExpressionStatement) statementNode() {}
+func (es *ExpressionStatement) TokenLiteral() string {
+	return es.Token.Literal
+}
+
+func (p *Program) String() string {
+	var out bytes.Buffer
+
+	for _, s := range p.Statements {
+		out.WriteString(s.String())
+	}
+
+	return out.String()
+}

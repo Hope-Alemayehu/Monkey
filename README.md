@@ -23,7 +23,7 @@ Ensure you have Go installed on your system.
 
 1. Clone the repository:
 
-   ```
+```
    git clone https://github.com/Hope-Alemayehu/Monkey
    gitmonkey-interpreter.git
    cd monkey-interpreter
@@ -47,16 +47,12 @@ Once inside the REPL, you can write Monkey code:
 15
 >> if (5 < 10) { return true; } else { return false; }
 true
-```
-To exit, press Ctrl + D or Ctrl + C.
-
 Project Structure
-Copy
+
 monkey-interpreter/
 ├── lexer/          # Lexical analysis
 ├── parser/         # Parsing expressions and statements
 ├── ast/            # Abstract Syntax Tree
-├── evaluator/      # Evaluating the AST
 ├── repl/           # Interactive Read-Eval-Print Loop
 ├── token/          # Token definitions
 ├── main.go         # Entry point
