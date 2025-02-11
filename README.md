@@ -49,7 +49,7 @@ Once inside the REPL, you can write Monkey code:
 true
 ```
 Project Structure
-
+```
 monkey-interpreter/
 ├── lexer/          # Lexical analysis
 ├── parser/         # Parsing expressions and statements
@@ -58,7 +58,7 @@ monkey-interpreter/
 ├── token/          # Token definitions
 ├── main.go         # Entry point
 ├── README.md       # Project documentation
-
+```
 Contributing
 Feel free to open issues or submit pull requests.
 
