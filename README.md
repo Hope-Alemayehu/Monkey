@@ -48,7 +48,7 @@ Once inside the REPL, you can write Monkey code:
 >> if (5 < 10) { return true; } else { return false; }
 true
 ```
-Project Structure
+## Project Structure
 ```
 monkey-interpreter/
 ├── lexer/          # Lexical analysis
@@ -59,8 +59,8 @@ monkey-interpreter/
 ├── main.go         # Entry point
 ├── README.md       # Project documentation
 ```
-Contributing
+## Contributing
 Feel free to open issues or submit pull requests.
 
-License
+## License
 This project is licensed under the MIT License.
