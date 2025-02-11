@@ -47,6 +47,7 @@ Once inside the REPL, you can write Monkey code:
 15
 >> if (5 < 10) { return true; } else { return false; }
 true
+```
 Project Structure
 
 monkey-interpreter/
