@@ -1,4 +1,4 @@
-# Monkey Interpreter in Go
+<!-- # Monkey Interpreter in Go
 
 Monkey is a simple programming language interpreter implemented in Go, inspired by the language from the book ["Writing an Interpreter in Go" by Thorsten Ball](https://interpreterbook.com/).
 
@@ -66,4 +66,4 @@ Feel free to open issues or submit pull requests.
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT License. -->
